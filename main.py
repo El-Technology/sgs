@@ -5,8 +5,11 @@ from langchain.indexes import VectorstoreIndexCreator
 from langchain.chains import RetrievalQA
 import os
 
-os.environ["OPENAI_API_KEY"] = "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"
+from dotenv import load_dotenv
 
+load_dotenv()
+
+openai_api_key = os.getenv("OPENAI_API_KEY")
 st.title('ChatWithCSV')
 def load_and_index_data(file_path):
     loader = CSVLoader(file_path=file_path)
