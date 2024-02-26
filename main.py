@@ -4,12 +4,13 @@ from langchain_community.llms import OpenAI
 from langchain.indexes import VectorstoreIndexCreator
 from langchain.chains import RetrievalQA
 import os
-openai_api_key = st.secrets["openai"]["secret_key"]
+openai_api_key = os.getenv("openai_api_key")
+
 from dotenv import load_dotenv
 
-# load_dotenv()
+load_dotenv()
 
-# openai_api_key = os.getenv("OPENAI_API_KEY")
+openai_api_key = os.getenv("OPENAI_API_KEY")
 st.title('ChatWithCSV')
 
 
