@@ -7,10 +7,10 @@ import os
 
 from dotenv import load_dotenv
 
-
+# Load environment variables from a .env file for local development
 load_dotenv()
 
-openai_api_key = os.getenv("OPENAI_API_KEY")
+openai_api_key = os.getenv("openai_api_key")
 
 st.title('ChatWithCSV')
 
