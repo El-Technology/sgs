@@ -6,3 +6,5 @@ langchain-openai==0.0.5
 langchain==0.1.6
 langchain-community==0.0.18
 langchain-core==0.1.22
+chroma-hnswlib ==0.7.3
+chromadb==0.4.22
